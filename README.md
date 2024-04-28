@@ -4,11 +4,22 @@
 
 1. Clone repository
 
-2. Create a backend server (free to choose library, NodeJS/Express recommended)
+2. in file .env change PORT.
 
 ```bash
-  cd backend
-  # Create project with your preferred backend library
+ defautl: 8081
+```
+
+3. start the server locally with.
+
+```bash
+  npm run dev
+```
+
+4. test the endpoint with postman json file.
+
+```bash
+ viviPostInterview.postman_collection
 ```
 
 ## Ojective
