@@ -4,19 +4,25 @@
 
 1. Clone repository
 
-2. in file .env change PORT.
+2. install packages
+
+```bash
+npm i
+```
+
+3. in file .env change PORT.
 
 ```bash
  defautl: 8081
 ```
 
-3. start the server locally with.
+4. start the server locally with.
 
 ```bash
   npm run dev
 ```
 
-4. test the endpoint with postman json file.
+5. test the endpoint with postman json file.
 
 ```bash
  viviPostInterview.postman_collection
