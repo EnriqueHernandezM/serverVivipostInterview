@@ -16,13 +16,19 @@ npm i
  defautl: 8081
 ```
 
-4. start the server locally with.
+4. valide credentials in headers
+
+```bash
+ token: "VivipostInterview"
+```
+
+5. start the server locally with.
 
 ```bash
   npm run dev
 ```
 
-5. test the endpoint with postman json file.
+6. test the endpoint with postman json file.
 
 ```bash
  viviPostInterview.postman_collection
