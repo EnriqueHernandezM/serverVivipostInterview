@@ -1,7 +1,7 @@
 {
-  "name": "root",
+  "name": "interview",
   "version": "1.0.0",
-  "description": "## Installation",
+  "description": "CRUD WITH SQL TABLE",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -11,9 +11,7 @@
   "author": "Enrique Hernandez",
   "license": "ISC",
   "dependencies": {
-    "decimal.js-light": "^2.5.1",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
     "mysql2": "^3.9.7"
   },
   "devDependencies": {
