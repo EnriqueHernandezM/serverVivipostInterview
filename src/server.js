@@ -1,20 +1,26 @@
+import express from "express";
+const app = express();
 import http from "http";
-
+const httpServer = http.createServer(app);
 import config from "./config/config.js";
-import Router from "./routers/orders.routes.js";
-//import orders from "./routers/orders.routes.js";
-
+import orders from "./routers/orders.routes.js";
 export default class InitServer {
   constructor() {
-    const router = new Router();
     this.PORT = config.PORT;
-    this.httpServer = http.createServer(function (req, res) {
-      router.routerMyServer(req, res);
-    });
+    this.app = app;
+    this.httpServer = httpServer;
+    this.middlewares();
+    this.routes();
   }
-
+  middlewares() {
+    this.app.use(express.json());
+    this.app.use(express.urlencoded({ extended: true }));
+  }
+  routes() {
+    this.app.use("/", orders);
+  }
   listen() {
-    this.httpServer.listen(this.PORT, () =>
+    httpServer.listen(this.PORT, () =>
       console.log(`✅ SERVER ON http://localhost:${this.PORT}`)
     );
   }
